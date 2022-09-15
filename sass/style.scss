@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  font-size: 18px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: hsl(185, 75%, 39%);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -200px left -180px, bottom -150px right -200px;
+  background-size: contain;
+}
+
+main {
+  .card {
+    margin-inline: auto;
+    min-width: 350px;
+    overflow: hidden;
+    color: hsl(229, 23%, 23%);
+    background-color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 12px 7px 20px 6px rgba(57, 75, 84, .08);
+    .card__bg {
+      background: url("../images/bg-pattern-card.svg") no-repeat;
+      width: 100%;
+      min-height: 140px;
+    }
+    img {
+      border-radius: 50%;
+      border: 5px solid white;
+      position: relative;
+      bottom: 2.8rem;
+    }
+    .card__profile {
+      position: relative;
+      bottom: 2.2rem;
+      border-bottom: 2px solid hsla(0,0%,59%, 0.1);
+      h1 {
+        font-size: 1rem;
+        .age {
+          margin-left: .2rem;
+          font-weight: 400;
+          color: hsl(227, 10%, 46%);
+        }
+      }
+      h2 {
+        margin: .4rem 0 1.2rem 0;
+        font-size: .8rem;
+        font-weight: 400;
+        color: hsl(227, 10%, 46%);
+      }
+    }
+    .card__stats {
+      position: relative;
+      bottom: 1rem;
+      display: flex;
+      justify-content: space-around;
+      h1 {
+        font-size: 1rem;
+      }
+      h3 {
+        font-size: .6rem;
+        font-weight: 400;
+        letter-spacing: .1rem;
+        color: hsl(227, 10%, 46%);
+        margin: 0.2rem 0 .4rem 0;
+      }
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  body {
+    background-repeat: no-repeat, no-repeat;
+    background-position: top -489px left -300px, bottom -489px right -300px;
+    background-size: auto;
+  }
+}
